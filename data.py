@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import shutil
+from PIL import Image, ImageOps
 
 df_mole = pd.read_csv('assets/archive/HAM10000_metadata.csv')
 df_mole['target'] = df_mole['dx']
@@ -18,3 +19,12 @@ for index, row in df_mole.iterrows():
         shutil.move(f"HAM10000_images/{image}.jpg", f"cancer_0/{image}.jpg")
     else:
         shutil.move(f"HAM10000_images/{image}.jpg", f"cancer_1/{image}.jpg")
+
+
+PATH = "assets/archive/cancer/"
+Copy_to_path="assets/archive/cancer/"
+
+for filename in os.listdir(PATH):
+    img = Image.open(os.path.join(PATH, filename)) # images are color images
+    gray_img = ImageOps.grayscale(img)
+    gray_img.save(Copy_to_path+filename+'_gs.jpeg')
