@@ -26,5 +26,9 @@ Copy_to_path="assets/archive/cancer/"
 
 for filename in os.listdir(PATH):
     img = Image.open(os.path.join(PATH, filename)) # images are color images
-    gray_img = ImageOps.grayscale(img)
+    gray_img = ImageOps.grayscale(img)             # to grayscale
     gray_img.save(Copy_to_path+filename+'_gs.jpeg')
+    flip_img = ImageOps.flip(img)                   # flip vertical
+    flip_img.save(Copy_to_path+filename+'_fv.jpeg')
+    mirror_img = ImageOps.mirror(img)                  # mirror (flip horiz)
+    mirror_img.save(Copy_to_path+filename+'_fh.jpeg')
