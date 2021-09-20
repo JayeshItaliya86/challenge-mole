@@ -15,17 +15,17 @@ df_mole['target'] = df_mole['target'].replace(to_replace=not_cancer, value=0)
 
 for index, row in df_mole.iterrows():
     image = row['image_id'] 
-    if row['cancer'] == 0:
-        shutil.move(f"HAM10000_images/{image}.jpg", f"cancer_0/{image}.jpg")
+    if row['target'] == 0:
+        shutil.move(f"assets/archive/HAM10000_images/{image}.jpg", f"assets/archive/cancer_0/{image}.jpg")
     else:
-        shutil.move(f"HAM10000_images/{image}.jpg", f"cancer_1/{image}.jpg")
+        shutil.move(f"assets/archive/HAM10000_images/{image}.jpg", f"assets/archive/cancer_1/{image}.jpg")
 
 
 PATH = "assets/archive/cancer/"
-Copy_to_path="assets/archive/cancer/"
+Copy_to_path = "assets/archive/cancer/"
 
 for filename in os.listdir(PATH):
-    img = Image.open(os.path.join(PATH, filename)) # images are color images
+    img = Image.open(os.path.join(PATH, filename))  # images are color images
     gray_img = ImageOps.grayscale(img)             # to grayscale
     gray_img.save(Copy_to_path+filename+'_gs.jpeg')
     flip_img = ImageOps.flip(img)                   # flip vertical
