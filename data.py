@@ -27,10 +27,15 @@ for index, row in df_mole.iterrows():
 PATH = "assets/archive/cancer/"
 Copy_to_path = "assets/archive/cancer/"
 
+# Image Augmentation(flip-mirror-rotate)
+PATH = "assets/archive/cancer/"
+Copy_to_path = "assets/archive/cancer/"
+
 for filename in os.listdir(PATH):
-    img = Image.open(os.path.join(PATH, filename))  # images are color images
-    gray_img = ImageOps.grayscale(img)             # to grayscale
-    gray_img.save(Copy_to_path+'gs_'+filename)
-    flip_img = ImageOps.flip(img)                   # flip vertical
+    img = Image.open(os.path.join(PATH, filename))    # images are color images
+    flip_img = ImageOps.flip(img)                     # flip vertical
     flip_img.save(Copy_to_path+'fv_'+filename)
-    mirror_img = ImageOps.mirror(img)                  # mirror (flip horiz)
+    mirror_img = ImageOps.mirror(img)                 # mirror (flip horiz)
+    mirror_img.save(Copy_to_path+'fh_'+filename)
+    rotate_img = img.rotate(45, expand=True)           # rotated image
+    rotate_img.save(Copy_to_path+'rt_'+filename)                
