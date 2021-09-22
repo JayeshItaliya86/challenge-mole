@@ -45,12 +45,16 @@ if uploaded_file is not None:
             model = keras.models.load_model('base_model_v4.h5', compile=False)
             pred = model.predict(img)
             prediction = np.rint(pred)
-            st.write(prediction)
-            st.subheader("Result")
+            #st.write(pred)
+            st.subheader("Dx")
             if prediction[0][0] == 1:
-                st.write('Cancer')
+                st.write('Cancer with {:.2f} % accuracy'.format(pred[0][0]*100))
             else:
-                st.write('Not Cancer')
+                st.write('Not Cancer with {:.2f} % accuracy'.format(pred[0][1]*100))
+            time.sleep(5)
+            f.close()
+            for img in os.listdir(user_folder):
+                os.remove(user_folder+img)
 else:
     st.write('File Not Valid. Please Upload a Mole Picture with format: *.PNG / *.JPEG / *.JPG')
 
