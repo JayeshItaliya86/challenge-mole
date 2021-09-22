@@ -22,6 +22,9 @@ This app detects whether or not skin is infected by cancer, based on an image.
 and [Logan](https://github.com/lvendrix)
 @Becode Gent.
 \nThis app is __NOT__ meant for medical purposes!
+\nData source: Harvard Dataverse
+\n"The __HAM10000__ ("Human Against Machine with 10000 training images") dataset, 
+\na large collection of multi-source dermatoscopic images of common pigmented skin lesions."
 """)
 
 
@@ -56,7 +59,7 @@ if uploaded_file is not None:
             for img in os.listdir(user_folder):
                 os.remove(user_folder+img)
 else:
-    st.write('File Not Valid. Please Upload a Mole Picture with format: *.PNG / *.JPEG / *.JPG')
+    st.write('File not found. Please upload your skin-mole picture with format: .png / .jpeg / .jpg')
 
 
 
