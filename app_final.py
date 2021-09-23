@@ -2,10 +2,11 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 
+
 from models import skin_or_else_classification, cancer_classification
 
 # Title of the page
-st.set_page_config(page_title="Skin Cancer App",layout='wide')
+st.set_page_config(page_title="Skin Cancer App", layout='wide')
 
 
 # Main text
@@ -18,15 +19,16 @@ This app detects whether or not skin is infected by cancer, based on an image.
 # Sidebar text
 st.sidebar.title('Model information')
 st.sidebar.write("""
-CNN built with Keras (Tensorflow)
-\nDataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
-\nData augmentation from 10.000 to 26.500 images
-\n Model and application created by 
-[Anne](https://github.com/annejungers),
+Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
+\nCNN built with Keras (Tensorflow)
+\nSequential model: Conv2D, Flatten, Dense
+\n1.5M trainable parameters
+\nAccuracy: 0.92
+\nModel and application created @Becode Gent by 
+\n[Anne](https://github.com/annejungers),
 [Jayesh](https://github.com/JayeshItaliya86), 
-[Jose](https://github.com/Roldan87)
-and [Logan](https://github.com/lvendrix)
-@Becode Gent.
+[Jose](https://github.com/Roldan87),
+[Logan](https://github.com/lvendrix)
 """)
 
 # file upload and handling logic
@@ -34,8 +36,8 @@ uploaded_file = st.file_uploader("Upload an image of skin", type=['png', 'jpeg',
 if uploaded_file is not None:
     user_image = Image.open(uploaded_file).convert('RGB')
     st.image(user_image, use_column_width=True)
-
     label_skin = skin_or_else_classification(user_image)
+
     # checks if image is a skin image or not (0 = Not skin, 1 = skin)
     if label_skin == 0:
         st.write("""
