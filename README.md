@@ -3,6 +3,7 @@
 # Description  
 The health company **"skinCare"** wants to create a simple web page where the user could upload a picture of the mole and see the result.  
 
+<img src="visuals/skin_cover.jpg" alt="wine" width="1024"/>
 
 # Installation
 
@@ -14,15 +15,33 @@ The health company **"skinCare"** wants to create a simple web page where the us
 * pandas==1.3.3
 * Pillow==8.3.2
 * streamlit==0.88.0
-* tensorflow-cpu==2.5.0
+* tensorflow-gpu==2.5.0
+* keras
+* cv2
+* sklearn.metrics
 
 # Usage 
 | File | Description |
 |:---|:---|
-|app.py|use it for streamlit application|
-|skin_cancer_model.py|use it for streamlit backend function file|
-|models/base_model_v4.h5|save cnn model|
-|models/keras_model_skin_or_else|save model for streamlit application|
+|app.py|used for streamlit application|
+|skin_cancer_model.py|used for streamlit backend function file|
+|models/base_model_v5.h5|saved cnn model|
+|models/keras_model_skin_or_else|saved model for streamlit application|
+
+# Data Source
+Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
+
+# Data Visualization
+
+<img src="visuals/lesions_plot.png" alt="wine" width="1024"/>
+
+<img src="visuals/classes_plot.png" alt="wine" width="1024"/>
+
+<img src="visuals/resampled_classes_plot.png" alt="wine" width="1024"/>
+
+<img src="visuals/history_plot.png" alt="wine" width="1024"/>
+
+<img src="visuals/matrix_model_v2_05.png" alt="wine" width="1024"/>
 
 # Website
 https://skin-cancer-application.herokuapp.com/
