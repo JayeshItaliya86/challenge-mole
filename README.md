@@ -57,6 +57,7 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 
 # Model History
 <img src="visuals/history_plot.png" alt="hist" width="1024"/>
+
 # Model Evaluation
 <img src="visuals/matrix_model_v2_05.png" alt="matrix" width="1024"/>
 
