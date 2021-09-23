@@ -16,17 +16,15 @@ The health company **"skinCare"** wants to create a simple web page where the us
 * Pillow==8.3.2
 * streamlit==0.88.0
 * tensorflow-gpu==2.5.0
-* keras
 * cv2
-* sklearn.metrics
+* sklearn
 
 # Usage 
 | File | Description |
 |:---|:---|
-|app.py|used for streamlit application|
-|skin_cancer_model.py|used for streamlit backend function file|
-|models/base_model_v5.h5|saved cnn model|
-|models/keras_model_skin_or_else|saved model for streamlit application|
+|cnn_model.py|Keras Neural Network (python file)|
+|data.py|Data pre-processing (python file)|
+|app @ 5720816|herokuapp folder|
 
 # Data Source
 Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
@@ -51,7 +49,15 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 **0** - Not Cancer</br>
 **1** - Cancer
 # Model Performance
-## Model Arquitecture
+## Metrics:
+| Metric | Value |
+|:---|:---|
+|Test Accuracy|0.75|
+|Test Loss|0.5|
+|Validation Acc|0.75|
+|Validation Loss|0.5|
+
+## Model Architecture
 
 <img src="visuals/model_sum.PNG" alt="sum" width="1024"/>
 
@@ -59,7 +65,7 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 <img src="visuals/history_plot.png" alt="hist" width="1024"/>
 
 # Model Evaluation
-<img src="visuals/matrix_model_v2_05.png" alt="matrix" width="1024"/>
+<img src="visuals/matrix_model_v2_06.png" alt="matrix" width="1024"/>
 
 # Website
 https://skin-cancer-application.herokuapp.com/
