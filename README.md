@@ -33,14 +33,31 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 
 # Data Visualization
 
+
 <img src="visuals/lesions_plot.png" alt="wine" width="1024"/>
+
+**nv** - Melanocytic nevi</br>
+**mel** - Melanoma</br>
+**bkl** - Benign keratosis-like lesions</br>
+**bcc** - Basal cell carcinoma</br>
+**akiec** - Actinic keratoses and intraepithelial carcinoma</br>
+**vasc** - Vascular lesions</br>
+**df** - Dermatofibroma</br>
 
 <img src="visuals/classes_plot.png" alt="wine" width="1024"/>
 
 <img src="visuals/resampled_classes_plot.png" alt="wine" width="1024"/>
 
-<img src="visuals/history_plot.png" alt="wine" width="1024"/>
+**0** - Not Cancer</br>
+**1** - Cancer
+# Model Performance
+## Model Arquitecture
 
+<img src="visuals/model_sum.png" alt="wine" width="1024"/>
+
+# Model History
+<img src="visuals/history_plot.png" alt="wine" width="1024"/>
+# Model Evaluation
 <img src="visuals/matrix_model_v2_05.png" alt="wine" width="1024"/>
 
 # Website
