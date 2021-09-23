@@ -44,21 +44,21 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 **vasc** - Vascular lesions</br>
 **df** - Dermatofibroma</br>
 
-<img src="visuals/classes_plot.png" alt="wine" width="1024"/>
+<img src="visuals/classes_plot.png" alt="class" width="1024"/>
 
-<img src="visuals/resampled_classes_plot.png" alt="wine" width="1024"/>
+<img src="visuals/resampled_classes_plot.png" alt="resamp" width="1024"/>
 
 **0** - Not Cancer</br>
 **1** - Cancer
 # Model Performance
 ## Model Arquitecture
 
-<img src="visuals/model_sum.png" alt="wine" width="1024"/>
+<img src="visuals/model_sum.PNG" alt="sum" width="1024"/>
 
 # Model History
-<img src="visuals/history_plot.png" alt="wine" width="1024"/>
+<img src="visuals/history_plot.png" alt="hist" width="1024"/>
 # Model Evaluation
-<img src="visuals/matrix_model_v2_05.png" alt="wine" width="1024"/>
+<img src="visuals/matrix_model_v2_05.png" alt="matrix" width="1024"/>
 
 # Website
 https://skin-cancer-application.herokuapp.com/
