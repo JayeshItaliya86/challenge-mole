@@ -24,7 +24,7 @@ The health company **"skinCare"** wants to create a simple web page where the us
 |:---|:---|
 |cnn_model.py|Keras Neural Network (python file)|
 |data.py|Data pre-processing (python file)|
-|app @ 5720816|herokuapp folder|
+|app @ 499fc32|herokuapp folder|
 
 # Data Source
 Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
