@@ -1,4 +1,4 @@
-# Skin mole detection application
+# SKIN MOLE DETECTION APP
 
 # Description  
 The health company **"skinCare"** wants to create a simple web page where the user could upload a picture of the mole and see the result.  
@@ -28,6 +28,7 @@ The health company **"skinCare"** wants to create a simple web page where the us
 
 # Data Source
 Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
+* Nº Samples: 10.015
 
 # Data Visualization
 
@@ -42,20 +43,30 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 **vasc** - Vascular lesions</br>
 **df** - Dermatofibroma</br>
 
+
+| Not Cancer  | Cancer |
+|---------|------------|
+|**akiec** | **bcc**  |
+|**df** | **mel**     |
+|**bkl**     |     |
+|**nv** |      |
+|**vasc**     |    |
+
 <img src="visuals/classes_plot.png" alt="class" width="1024"/>
+
+
+## Data Augmentation
+
+* Flip Vertical
+* Mirror
+* Rotate 45º</br>
+* **Total Nº Samples = 26.538**
 
 <img src="visuals/resampled_classes_plot.png" alt="resamp" width="1024"/>
 
-**0** - Not Cancer</br>
-**1** - Cancer
+**0** - Not Cancer (16.776)</br>
+**1** - Cancer (9.762)
 # Model Performance
-## Metrics:
-| Metric | Value |
-|:---|:---|
-|Test Accuracy|0.75|
-|Test Loss|0.5|
-|Validation Acc|0.75|
-|Validation Loss|0.5|
 
 ## Model Architecture
 
@@ -66,6 +77,14 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 
 # Model Evaluation
 <img src="visuals/matrix_model_v2_06.png" alt="matrix" width="1024"/>
+
+## Metrics:
+| Metric | Value |
+|:---|:---|
+|Test Accuracy|0.75|
+|Test Loss|0.5|
+|Validation Acc|0.75|
+|Validation Loss|0.5|
 
 # Website
 https://skin-cancer-application.herokuapp.com/
