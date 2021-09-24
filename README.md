@@ -16,8 +16,8 @@ The health company **"skinCare"** wants to create a simple web page where the us
 * Pillow==8.3.2
 * streamlit==0.88.0
 * tensorflow-gpu==2.5.0
-* cv2
-* sklearn
+* opencv-python==4.5.3.56
+* sklearn==0.24.2
 
 # Usage 
 | File | Description |
@@ -80,4 +80,3 @@ https://skin-cancer-application.herokuapp.com/
 
 # Timeline
 20/09/2021-24/09/2021
-
