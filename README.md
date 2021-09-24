@@ -67,13 +67,6 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 **0** - Not Cancer (16.776)</br>
 **1** - Cancer (9.762)
 # Model Performance
-## Metrics:
-| Metric | Value |
-|:---|:---|
-|Test Accuracy|0.75|
-|Test Loss|0.5|
-|Validation Acc|0.75|
-|Validation Loss|0.5|
 
 ## Model Architecture
 
@@ -84,6 +77,14 @@ Dataset: The [__HAM10000__](https://dataverse.harvard.edu/dataset.xhtml?persiste
 
 # Model Evaluation
 <img src="visuals/matrix_model_v2_06.png" alt="matrix" width="1024"/>
+
+## Metrics:
+| Metric | Value |
+|:---|:---|
+|Test Accuracy|0.75|
+|Test Loss|0.5|
+|Validation Acc|0.75|
+|Validation Loss|0.5|
 
 # Website
 https://skin-cancer-application.herokuapp.com/
